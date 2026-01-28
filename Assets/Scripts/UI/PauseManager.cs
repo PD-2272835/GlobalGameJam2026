@@ -4,10 +4,9 @@ using UnityEngine.SceneManagement;
 
 public class PauseManager : MonoBehaviour
 {
-    public static bool isPaused = false;
+    public static bool isPaused;
 
     public GameObject background;
-    public GameObject mainMenu;
     public GameObject settingsMenu;
 
     public void TogglePause()
@@ -27,7 +26,7 @@ public class PauseManager : MonoBehaviour
         isPaused = true;
         Time.timeScale = 0f;
         background.SetActive(true);
-        mainMenu.SetActive(true);
+        settingsMenu.SetActive(true);
     }
 
     public void Unpause()
@@ -35,20 +34,13 @@ public class PauseManager : MonoBehaviour
         isPaused = false;
         Time.timeScale = 1f;
         background.SetActive(false);
-        mainMenu.SetActive(false);
         settingsMenu.SetActive(false);
     }
 
-    public void OpenMainMenu()
+    public void Menu()
     {
-        settingsMenu.SetActive(false);
-        mainMenu.SetActive(true);
-    }
-
-    public void OpenSettingsMenu()
-    {
-        mainMenu.SetActive(false);
-        settingsMenu.SetActive(true);
+        ///return to title screen
+        //SceneManager.LoadScene();
     }
 
     public void Restart()
@@ -65,5 +57,12 @@ public class PauseManager : MonoBehaviour
     public void MusicOff()
     {
         ///disable music
+    }
+
+    private void Awake()
+    {
+        isPaused = false;
+        background.SetActive(false);
+        settingsMenu.SetActive(false);
     }
 }
