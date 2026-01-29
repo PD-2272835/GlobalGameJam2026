@@ -10,7 +10,7 @@ public struct MaskAttribute
 
 
 
-public class Mask : IRandomCreatable
+public class Mask : MonoBehaviour, IRandomCreatable
 {
     //Masks have three attributes
     private Color Colour_;
