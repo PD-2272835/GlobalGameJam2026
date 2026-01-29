@@ -1,8 +1,12 @@
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class MaskBuilder : MonoBehaviour
 {
     public MaskBehaviour maskBehaviour;
+
+    private int patternID = 0;
+    private int accessoryID = 0;
 
     public void SetColour(int colourID)
     {
@@ -38,13 +42,94 @@ public class MaskBuilder : MonoBehaviour
         maskBehaviour.SetColour(colour);
     }
 
-    public void SetPattern(int patternID)
+    public void ScrollPattern()
     {
-        //
+        MaskAttribute pattern;
+
+        patternID++;
+        if (patternID >= 10)
+        {
+            patternID = 0;
+        }
+
+        switch (patternID)
+        {
+            case 0:
+                ///pattern = none
+                break;
+            case 1:
+                ///pattern = trim blue
+                break;
+            case 2:
+                ///pattern = trim dark blue
+                break;
+            case 3:
+                ///pattern = trim green
+                break;
+            case 4:
+                ///pattern = trim grey
+                break;
+            case 5:
+                ///pattern = trim orange
+                break;
+            case 6:
+                ///pattern = trim pink
+                break;
+            case 7:
+                ///pattern = trim purple
+                break;
+            case 8:
+                ///pattern = trim red
+                break;
+            case 9:
+                ///pattern = trim silver
+                break;
+        }
+
+        ///maskBehaviour.SetPattern(pattern);
     }
 
-    public void SetAccessory(int accessoryID)
+    public void ScrollAccessory()
     {
-        //
+        MaskAttribute accessory;
+
+        accessoryID++;
+        if (accessoryID >= 9)
+        {
+            accessoryID = 0;
+        }
+
+        switch (accessoryID)
+        {
+            case 0:
+                ///accessory = none
+                break;
+            case 1:
+                ///accessory = feathers blue
+                break;
+            case 2:
+                ///accessory = feathers green
+                break;
+            case 3:
+                ///accessory = feathers grey
+                break;
+            case 4:
+                ///accessory = feathers orange
+                break;
+            case 5:
+                ///accessory = feathers pink
+                break;
+            case 6:
+                ///accessory = feathers purple
+                break;
+            case 7:
+                ///accessory = feathers red
+                break;
+            case 8:
+                ///accesssory = feathers white
+                break;
+        }
+
+        ///maskBehaviour.SetAccessory(accessory);
     }
 }
