@@ -26,7 +26,7 @@ public class MaskBehaviour : MonoBehaviour
 
     public void SetAccessory(MaskAttribute accessory)
     {
-        MaskHolder.SetPattern(accessory);
+        MaskHolder.SetAccessory(accessory);
         SpriteRenderers_[1].sprite = MaskHolder.GetAccessory().AttributeSprite;
     }
 }

@@ -19,7 +19,7 @@ public class Mask : IRandomCreatable
 
     public void CreateRandom()
     {
-        Colour_
+        ///Colour_
     }
 
     //Setters
