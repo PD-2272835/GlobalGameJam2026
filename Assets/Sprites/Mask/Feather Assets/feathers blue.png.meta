@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e3f3132b24e58b04b8a1f4c1a26abdee
+guid: 5e806c1990473fe498d5e9fef4583350
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2789145471137382417
-    second: feathers blue_0
+      213: 5910755814350678794
+    second: feathers blue 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 10
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: feathers blue_0
+      name: feathers blue 1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 2224
-        height: 1668
+        x: 630
+        y: 1054
+        width: 987
+        height: 611
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 110880a470905b620800000000000000
-      internalID: 2789145471137382417
+      spriteID: a0b627cb819370250800000000000000
+      internalID: 5910755814350678794
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      feathers blue_0: 2789145471137382417
+      feathers blue 1_0: 5910755814350678794
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -47,7 +47,7 @@ public class MaskBuilder : MonoBehaviour
         MaskAttribute pattern;
 
         patternID++;
-        if (patternID >= 10)
+        if (patternID >= 9)
         {
             patternID = 0;
         }
@@ -55,33 +55,30 @@ public class MaskBuilder : MonoBehaviour
         switch (patternID)
         {
             case 0:
-                ///pattern = none
-                break;
-            case 1:
                 ///pattern = trim blue
                 break;
-            case 2:
+            case 1:
                 ///pattern = trim dark blue
                 break;
-            case 3:
+            case 2:
                 ///pattern = trim green
                 break;
-            case 4:
+            case 3:
                 ///pattern = trim grey
                 break;
-            case 5:
+            case 4:
                 ///pattern = trim orange
                 break;
-            case 6:
+            case 5:
                 ///pattern = trim pink
                 break;
-            case 7:
+            case 6:
                 ///pattern = trim purple
                 break;
-            case 8:
+            case 7:
                 ///pattern = trim red
                 break;
-            case 9:
+            case 8:
                 ///pattern = trim silver
                 break;
         }
@@ -131,5 +128,12 @@ public class MaskBuilder : MonoBehaviour
         }
 
         ///maskBehaviour.SetAccessory(accessory);
+    }
+
+    public void ResetMask()
+    {
+        SetColour(0);
+        ///maskBehaviour.SetPattern(default);
+        ///maskBehaviour.SetAccessory(none);
     }
 }
