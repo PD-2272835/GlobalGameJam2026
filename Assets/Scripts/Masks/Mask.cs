@@ -10,43 +10,31 @@ public struct MaskAttribute
 
 
 
-public class Mask : MonoBehaviour
+public class Mask : IRandomCreatable
 {
-
+    //Masks have three attributes
     private Color Colour_;
     private MaskAttribute Pattern_;
     private MaskAttribute Accessory_;
 
-    private SpriteRenderer[] SpriteRenderers_; //0: pattern 1: Accessory
-
-    private void Awake()
+    public void CreateRandom()
     {
-        SpriteRenderers_ = GetComponentsInChildren<SpriteRenderer>();
+        Colour_
     }
 
-
-    public void SetColour(Color colour)
-    {
-        Colour_ = colour;
-        SpriteRenderers_[0].color = Colour_;
-    }
+    //Setters
+    public void SetColour(Color colour) => Colour_ = colour;
+    public void SetPattern(MaskAttribute pattern) => Pattern_ = pattern;
+    public void SetAccessory(MaskAttribute accessory) => Accessory_ = accessory;
 
 
-    public void SetPattern(MaskAttribute pattern)
-    {
-        Pattern_ = pattern;
-        SpriteRenderers_[0].sprite = Pattern_.AttributeSprite;
-    }
+    //Getters
+    //Get this mask's raw attributes
+    public Color GetColour() => Colour_;
+    public MaskAttribute GetPattern() => Pattern_;
+    public MaskAttribute GetAccessory() => Accessory_;
 
-
-    public void SetAccessory(MaskAttribute accessory)
-    {
-        Accessory_ = accessory;
-        SpriteRenderers_[1].sprite = Accessory_.AttributeSprite;
-    }
-
-
-
+    //Get names of mask's attributes
     public string GetColourName() { return Colour_.ToString(); }
     public string GetPatternName() { return Pattern_.ToString(); }
     public string GetAccessoryName() { return Accessory_.ToString(); }
