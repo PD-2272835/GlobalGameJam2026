@@ -118,7 +118,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6535621975895302445
 Transform:
   m_ObjectHideFlags: 0
@@ -304,7 +304,8 @@ MonoBehaviour:
   _ComponentPrice: 10
   _IncorrectComponentPenalty: 10
   _Patience: 7
-  SpeechBubble: {fileID: 4709355915035918810}
+  _SpeechBubble: {fileID: 4709355915035918810}
+  _SpeechCanvas: {fileID: 2107896778579546137}
 --- !u!1 &6068898433795384149
 GameObject:
   m_ObjectHideFlags: 0

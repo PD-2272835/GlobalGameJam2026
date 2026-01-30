@@ -27,7 +27,5 @@ public class Round : GameState
             CurrentCustomer = context.CustomerFactories[Random.Range(0, context.CustomerFactories.Length)].CreateCustomer(CustomerSpawnPoint, CustomerOrderPoint);
         }
 
-        
-
     }
 }

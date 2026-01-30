@@ -16,13 +16,14 @@ public class CustomerBehaviour : MonoBehaviour, IOrderTeller
     [SerializeField] private int _IncorrectComponentPenalty = 10;
     [SerializeField] private float _Patience = 7;
 
-    [SerializeField] private TextMeshProUGUI SpeechBubble; //TODO: need to implement this speech bubble thingy
+    [SerializeField] private TextMeshProUGUI _SpeechBubble; //TODO: need to implement this speech bubble thingy
+    [SerializeField] private GameObject _SpeechCanvas;
+
     private bool hasOrdered = false;
 
     private void Awake()
     {
         _MaskOrder = new Order(_ComponentPrice, _IncorrectComponentPenalty, _Patience);
-        //SpeechBubble = GetComponentInChildren<TextMeshProUGUI>();
     }
 
 
@@ -35,12 +36,12 @@ public class CustomerBehaviour : MonoBehaviour, IOrderTeller
                 WalkTo(_TargetPosition);
             }
             else { _TargetPosition = Vector3.zero; }
-        }
-        if (!hasOrdered)
+        } else if (!hasOrdered)
         {
             hasOrdered = true;
             TellOrder();
         }
+        
     }
 
 
@@ -52,22 +53,22 @@ public class CustomerBehaviour : MonoBehaviour, IOrderTeller
 
     public void TellOrder()
     {
-        SpeechBubble.gameObject.SetActive(true);    
+        _SpeechCanvas.gameObject.SetActive(true);
         StartCoroutine(ReciteOrder());
     }
 
     private IEnumerator ReciteOrder()
     {
         var orderMask = _MaskOrder.GetMask();
-        SpeechBubble.text = _Greeting;
+        _SpeechBubble.text = _Greeting;
         yield return new WaitForSeconds(0.2f);
         for (int i = 0; i < _Enquiry.Length; i++)
         {
-            SpeechBubble.text = string.Format(_Enquiry[i], orderMask.GetColourName(), orderMask.GetPatternName(), orderMask.GetAccessoryName());
+            _SpeechBubble.text = string.Format(_Enquiry[i], orderMask.GetColourName(), orderMask.GetPatternName(), orderMask.GetAccessoryName());
             yield return new WaitForSeconds(_TimeBetweenStatements);
         }
         yield return new WaitForSeconds(0.5f);
-        SpeechBubble.gameObject.SetActive(false);
+        _SpeechCanvas.gameObject.SetActive(false);
     }
 
     public void SetTarget(Vector3 newTarget) => _TargetPosition = newTarget;
