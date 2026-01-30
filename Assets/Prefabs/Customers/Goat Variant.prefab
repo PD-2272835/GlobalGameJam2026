@@ -48,6 +48,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2915493389904708531, guid: d8087869d3587b541ae41540dbf37a61, type: 3}
+      propertyPath: _Greeting
+      value: This looks like a nice shop!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2915493389904708531, guid: d8087869d3587b541ae41540dbf37a61, type: 3}
+      propertyPath: _Patience
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2915493389904708531, guid: d8087869d3587b541ae41540dbf37a61, type: 3}
+      propertyPath: _ComponentPrice
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2915493389904708531, guid: d8087869d3587b541ae41540dbf37a61, type: 3}
+      propertyPath: _Enquiry.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2915493389904708531, guid: d8087869d3587b541ae41540dbf37a61, type: 3}
+      propertyPath: '_Enquiry.Array.data[0]'
+      value: Could I get a {1} on a {0} mask?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2915493389904708531, guid: d8087869d3587b541ae41540dbf37a61, type: 3}
+      propertyPath: '_Enquiry.Array.data[1]'
+      value: Oh, with {2} too!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2915493389904708531, guid: d8087869d3587b541ae41540dbf37a61, type: 3}
+      propertyPath: _TimeBetweenStatements
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2915493389904708531, guid: d8087869d3587b541ae41540dbf37a61, type: 3}
+      propertyPath: _IncorrectComponentPenalty
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 2939733695979502514, guid: d8087869d3587b541ae41540dbf37a61, type: 3}
       propertyPath: m_Name
       value: Goat Variant

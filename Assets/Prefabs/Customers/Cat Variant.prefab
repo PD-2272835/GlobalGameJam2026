@@ -48,6 +48,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2915493389904708531, guid: d8087869d3587b541ae41540dbf37a61, type: 3}
+      propertyPath: _Speed
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2915493389904708531, guid: d8087869d3587b541ae41540dbf37a61, type: 3}
+      propertyPath: _Greeting
+      value: Yo! Do you sell masks here?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2915493389904708531, guid: d8087869d3587b541ae41540dbf37a61, type: 3}
+      propertyPath: _ComponentPrice
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2915493389904708531, guid: d8087869d3587b541ae41540dbf37a61, type: 3}
+      propertyPath: _Enquiry.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2915493389904708531, guid: d8087869d3587b541ae41540dbf37a61, type: 3}
+      propertyPath: '_Enquiry.Array.data[0]'
+      value: I definitely want {2} on mine!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2915493389904708531, guid: d8087869d3587b541ae41540dbf37a61, type: 3}
+      propertyPath: '_Enquiry.Array.data[1]'
+      value: Maybe {1} on a {0} mask.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2915493389904708531, guid: d8087869d3587b541ae41540dbf37a61, type: 3}
+      propertyPath: _TimeBetweenStatements
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2915493389904708531, guid: d8087869d3587b541ae41540dbf37a61, type: 3}
+      propertyPath: _IncorrectComponentPenalty
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 2939733695979502514, guid: d8087869d3587b541ae41540dbf37a61, type: 3}
       propertyPath: m_Name
       value: Cat Variant

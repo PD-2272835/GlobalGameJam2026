@@ -48,6 +48,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2915493389904708531, guid: d8087869d3587b541ae41540dbf37a61, type: 3}
+      propertyPath: _Greeting
+      value: Hello there!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2915493389904708531, guid: d8087869d3587b541ae41540dbf37a61, type: 3}
+      propertyPath: _Patience
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2915493389904708531, guid: d8087869d3587b541ae41540dbf37a61, type: 3}
+      propertyPath: _ComponentPrice
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 2915493389904708531, guid: d8087869d3587b541ae41540dbf37a61, type: 3}
+      propertyPath: _Enquiry.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2915493389904708531, guid: d8087869d3587b541ae41540dbf37a61, type: 3}
+      propertyPath: '_Enquiry.Array.data[0]'
+      value: I think I'd like a mask that's {0}.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2915493389904708531, guid: d8087869d3587b541ae41540dbf37a61, type: 3}
+      propertyPath: '_Enquiry.Array.data[1]'
+      value: Oh, and {1} with {2}!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2915493389904708531, guid: d8087869d3587b541ae41540dbf37a61, type: 3}
+      propertyPath: _TimeBetweenStatements
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2915493389904708531, guid: d8087869d3587b541ae41540dbf37a61, type: 3}
+      propertyPath: _IncorrectComponentPenalty
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 2939733695979502514, guid: d8087869d3587b541ae41540dbf37a61, type: 3}
       propertyPath: m_Name
       value: Pigeon Variant
