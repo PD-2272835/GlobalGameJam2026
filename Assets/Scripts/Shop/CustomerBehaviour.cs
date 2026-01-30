@@ -8,7 +8,7 @@ public class CustomerBehaviour : MonoBehaviour, IOrderTeller
     [SerializeField] private string _Greeting;
     [SerializeField] private string[] _Enquiry; //"I would like a", "Can I have a" - {0} for mask colour {1} for mask pattern {2} for mask accessory
     [SerializeField] private float _TimeBetweenStatements = 0;
-    [SerializeField] private float _Speed = 5f;
+    [SerializeField] private float _Speed = 2f;
     private Vector3 _TargetPosition;
 
     [SerializeField] private Order _MaskOrder;
@@ -16,31 +16,38 @@ public class CustomerBehaviour : MonoBehaviour, IOrderTeller
     [SerializeField] private int _IncorrectComponentPenalty = 10;
     [SerializeField] private float _Patience = 7;
 
-    private TextMeshProUGUI SpeechBubble; //TODO: need to implement this speech bubble thingy
+    [SerializeField] private TextMeshProUGUI SpeechBubble; //TODO: need to implement this speech bubble thingy
+    private bool hasOrdered = false;
 
     private void Awake()
     {
         _MaskOrder = new Order(_ComponentPrice, _IncorrectComponentPenalty, _Patience);
-        SpeechBubble = GetComponentInChildren<TextMeshProUGUI>();
+        //SpeechBubble = GetComponentInChildren<TextMeshProUGUI>();
     }
 
 
     void FixedUpdate()
     {
-       if (_TargetPosition != Vector3.zero)
-       {
-           if(transform.position.y <= _TargetPosition.y)
-           {
-               WalkTo(_TargetPosition);
-           }
-           else { _TargetPosition = Vector3.zero; }
-       }     
+        if (_TargetPosition != Vector3.zero)
+        {
+            if (transform.position.x <= _TargetPosition.x)
+            {
+                WalkTo(_TargetPosition);
+            }
+            else { _TargetPosition = Vector3.zero; }
+        }
+        if (!hasOrdered)
+        {
+            hasOrdered = true;
+            TellOrder();
+        }
     }
 
+
     public void WalkTo(Vector3 target)
-    {
-        Vector3 direction = (transform.position - target).normalized;
-        transform.position += (direction * _Speed * Time.deltaTime);
+    {   
+        Vector3 direction = (target - transform.position).normalized;
+        transform.Translate(_Speed * Time.deltaTime * direction, Space.World);
     }
 
     public void TellOrder()

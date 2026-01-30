@@ -14,11 +14,15 @@ public class GameStateManager : MonoBehaviour
 
     private void Awake()
     {
-        _CurrentState = MainMenu;
+        ChangeState(Round);
         CustomerFactories = transform.GetComponents<CustomerFactory>();
     }
 
 
+    private void Update()
+    {
+        _CurrentState.UpdateState(this);
+    }
 
     public void ChangeState(GameState newState)
     {
