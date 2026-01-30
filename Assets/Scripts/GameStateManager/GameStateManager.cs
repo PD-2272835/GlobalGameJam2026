@@ -9,10 +9,13 @@ public class GameStateManager : MonoBehaviour
     public Round Round = new Round();
     public MainMenu MainMenu = new MainMenu();
 
+    public CustomerFactory[] CustomerFactories;
+
 
     private void Awake()
     {
         _CurrentState = MainMenu;
+        CustomerFactories = transform.GetComponents<CustomerFactory>();
     }
 
 
