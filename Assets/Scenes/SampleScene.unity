@@ -322,7 +322,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 322522525}
-  - component: {fileID: 322522526}
   m_Layer: 0
   m_Name: Mask
   m_TagString: Untagged
@@ -347,18 +346,6 @@ Transform:
   - {fileID: 1067824860}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &322522526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 322522523}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82ddbda70b84cfe4f88fd65cb9864854, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Mask
 --- !u!1 &340268187
 GameObject:
   m_ObjectHideFlags: 0
@@ -2038,7 +2025,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d69f95a882921ea4e872f7acb188b6d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MaskBehaviour
-  MaskHolder: {fileID: 0}
 --- !u!1 &904469235
 GameObject:
   m_ObjectHideFlags: 0
